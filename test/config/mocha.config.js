@@ -1,9 +1,4 @@
-"use strict";
-
 module.exports = {
-    diff: true,
-    reporter: 'mochawesome',
-    timeout: 5000,
-    ui: 'bdd',
+    reporter: 'spec',
     spec: 'test/specs/*spec.js'
 };
