@@ -20,8 +20,8 @@ class Calculator {
    * @return {Number} summarize all parameters
    * @memberof Calculator
    */
-  add(a, b, c) {
-    return a + b + c;
+   add(...args) {
+    return args.reduce((acc, curr) => acc + curr);
   }
 
   /**
@@ -33,8 +33,8 @@ class Calculator {
    * @return {Number} multiply all parameters
    * @memberof Calculator
    */
-  multiply(a, b, c) {
-    return a * b * c;
+  multiply(...args) {
+    return args.reduce((acc, curr) => acc * curr);
   }
 }
 
