@@ -21,11 +21,11 @@ class Calculator {
    * @memberof Calculator
    */
   add(...args) {
-    let elementType = args.every((element) => typeof element === "number");
+    let elementType = args.every((element) => typeof element === 'number');
     if (elementType === true) {
       return args.reduce((acc, curr) => acc + curr);
     } else {
-      return "Variable in an array is not a number";
+      return 'Variable in an array is not a number';
     }
   }
 
@@ -39,11 +39,11 @@ class Calculator {
    * @memberof Calculator
    */
   multiply(...args) {
-    let elementType = args.every((element) => typeof element === "number");
+    let elementType = args.every((element) => typeof element === 'number');
     if (elementType === true) {
       return args.reduce((acc, curr) => acc * curr);
     } else {
-      return "Variable in an array is not a number";
+      return 'Variable in an array is not a number';
     }
   }
 }
