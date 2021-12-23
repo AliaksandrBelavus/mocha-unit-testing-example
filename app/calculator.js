@@ -14,27 +14,37 @@ class Calculator {
   /**
    *
    *
-   * @param {Number} a first parameter
-   * @param {Number} b second parameter
-   * @param {Number} c third parameter
-   * @return {Number} summarize all parameters
+   * @param {*} args array of numbers
+   * @param {*} elementType the value of checking the array for a number
+   * @param {*} element each element of the array
+   * @return {*} add all numbers
    * @memberof Calculator
    */
-   add(...args) {
-    return args.reduce((acc, curr) => acc + curr);
+  add(...args) {
+    let elementType = args.every((element) => typeof element === 'number');
+    if (elementType === true) {
+      return args.reduce((acc, curr) => acc + curr);
+    } else {
+      return 'Variable in an array is not a number';
+    }
   }
 
   /**
    *
    *
-   * @param {Number} a first parameter
-   * @param {Number} b second parameter
-   * @param {Number} c third parameter
+   * @param {*} args array of numbers
+   * @param {*} elementType the value of checking the array for a number
+   * @param {*} element each element of the array
    * @return {Number} multiply all parameters
    * @memberof Calculator
    */
-   multiply(...args) {
-    return args.reduce((acc, curr) => acc * curr);
+  multiply(...args) {
+    let elementType = args.every((element) => typeof element === 'number');
+    if (elementType === true) {
+      return args.reduce((acc, curr) => acc * curr);
+    } else {
+      return 'Variable in an array is not a number';
+    }
   }
 }
 
