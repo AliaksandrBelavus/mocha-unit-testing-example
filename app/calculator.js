@@ -25,7 +25,7 @@ class Calculator {
     if (elementType === true) {
       return args.reduce((acc, curr) => acc + curr);
     } else {
-      return 'Variable in an array is not a number';
+      return new Error('Variable in an array is not a number');
     }
   }
 
@@ -43,7 +43,7 @@ class Calculator {
     if (elementType === true) {
       return args.reduce((acc, curr) => acc * curr);
     } else {
-      return 'Variable in an array is not a number';
+      return new Error('Variable in an array is not a number');
     }
   }
 }

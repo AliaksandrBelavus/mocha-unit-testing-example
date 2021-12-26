@@ -46,12 +46,12 @@ describe('Summarize all parameters', function () {
     expect(calculator.add(0, 0)).to.be.eql(0);
   });
   it('Not a number, but a String value', function () {
-    expect(calculator.add(0, 0, 'GGGG')).to.be.eql('Variable in an array is not a number');
+    expect(calculator.add(0, 0, 'GGGG')).to.be.an('Error');
   });
   it('Not a number, but a Boolean value', function () {
-    expect(calculator.add(0, 0, false)).to.be.eql('Variable in an array is not a number');
+    expect(calculator.add(0, 0, false)).to.be.an('Error');
   });
   it('Not a number, but an undefined value', function () {
-    expect(calculator.add(0, 0, undefined)).to.be.eql('Variable in an array is not a number');
+    expect(calculator.add(0, 0, undefined)).to.be.an('Error');
   });
 });
