@@ -37,12 +37,15 @@ describe('Multiply all parameters', function () {
     expect(calculator.multiply(0, 0)).to.be.eql(0);
   });
   it('Not a number, but a String value', function () {
-    expect(calculator.add(0, 0, 'GGGG')).to.be.an('Error');
+    let addWithNotNumber = () => calculator.add(0, 0, 'GGGG');
+    expect(addWithNotNumber).to.throw(Error, 'Variable in an array is not a number');
   });
   it('Not a number, but a Boolean value', function () {
-    expect(calculator.add(0, 0, false)).to.be.an('Error');
+    let addWithNotNumber = () => calculator.add(0, 0, false);
+    expect(addWithNotNumber).to.throw(Error, 'Variable in an array is not a number');
   });
   it('Not a number, but an undefined value', function () {
-    expect(calculator.add(0, 0, undefined)).to.be.an('Error');
+    let addWithNotNumber = () => calculator.add(0, 0, undefined);
+    expect(addWithNotNumber).to.throw(Error, 'Variable in an array is not a number');
   });
 });
